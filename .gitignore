@@ -3,3 +3,4 @@ MongoDB/mongod.lock
 .gitignore
 MongoDB/WiredTiger
 MongoDB/WiredTiger.lock
+MongoDB/
