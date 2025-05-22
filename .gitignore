@@ -1,1 +1,5 @@
 node_modules/
+MongoDB/mongod.lock
+.gitignore
+MongoDB/WiredTiger
+MongoDB/WiredTiger.lock

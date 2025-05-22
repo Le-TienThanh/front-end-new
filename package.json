@@ -5,19 +5,25 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
-    "watch": "sass -w src/resources/scss/ --output src/public/css/",
+    "watch": "sass --watch src/resources/scss:src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
+  "lint-staged": {
+    "*": "your-cmd"
+  },
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
     "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
     "sass": "^1.89.0"
   }
 }
