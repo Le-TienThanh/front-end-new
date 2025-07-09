@@ -2,4 +2,12 @@
   margin-top: 16px;
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: not-allowed;
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -17,6 +17,22 @@ class CourseController {
     create(req, res, next) {
         res.render('./courses/create');
     }
+    edit(req, res, next) {
+        Course.findById(req.params.id)
+            .then((course) => {
+                res.render('./courses/edit', {
+                    course: util.mongooseToObject(course),
+                });
+            })
+            .catch(next);
+    }
+    update(req, res, next) {
+        Course.updateOne({ _id: req.params.id }, req.body)
+            .then(() => {
+                res.redirect('/me/stored/courses');
+            })
+            .catch(next);
+    }
     store(req, res, next) {
         const formData = req.body;
         formData.image = `https://img.youtube.com/vi/${req.body.videoId}/sddefault.jpg`;
@@ -27,7 +43,6 @@ class CourseController {
                 res.redirect('/');
             })
             .catch((error) => {});
-        
     }
 }
 
