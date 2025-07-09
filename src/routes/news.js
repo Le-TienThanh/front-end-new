@@ -3,6 +3,7 @@ const newsRouter = express.Router();
 import NewsController from '../app/controllers/NewsController.js';
 
 
-newsRouter.use('/', NewsController.index)
+
+newsRouter.get('/', NewsController.index)
 
 export default  newsRouter;
